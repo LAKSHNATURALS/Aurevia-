@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurevia | Luxury Herbal Care</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: white;
+    }
+
+    header {
+      background: rgba(0,0,0,0.8);
+      padding: 18px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      font-size: 26px;
+      letter-spacing: 2px;
+      color: #d4af37;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      height: 90vh;
+      background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.3)),
+      url("https://images.unsplash.com/photo-1612810436541-336d19b7d1c9?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero-content h2 {
+      font-size: 48px;
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #d4af37;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+      margin-right: 10px;
+    }
+
+    .btn:hover {
+      background: white;
+      color: black;
+    }
+
+    section {
+      padding: 70px 40px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 34px;
+      margin-bottom: 20px;
+      color: #d4af37;
+    }
+
+    section p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #ccc;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .product-card {
+      background: #141414;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #222;
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      border: 1px solid #d4af37;
+    }
+
+    .product-card h3 {
+      margin-bottom: 12px;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .product-card p {
+      font-size: 15px;
+      color: #aaa;
+    }
+
+    .highlight {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .highlight-box {
+      background: #111;
+      padding: 25px;
+      width: 260px;
+      border-radius: 15px;
+      border: 1px solid #222;
+    }
+
+    .highlight-box h3 {
+      color: #d4af37;
+      margin-bottom: 8px;
+    }
+
+    .highlight-box p {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .contact-box {
+      background: #141414;
+      max-width: 700px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid #222;
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .contact-box h3 {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      margin: 10px 0;
+      color: #ccc;
+    }
+
+    footer {
+      background: black;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #222;
+      color: #aaa;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+
+    .callbtn {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: #d4af37;
+      color: black;
+      padding: 14px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+
+    @media(max-width: 600px) {
+      .hero-content h2 {
+        font-size: 34px;
+      }
+
+      nav a {
+        font-size: 13px;
+        margin-left: 10px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>AUREVIA</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <div class="hero" id="home">
+    <div class="hero-content">
+      <h2>Luxury Herbal Care</h2>
+      <p>
+        Welcome to <b>AUREVIA</b> — premium herbal & natural personal care products.
+        Pure ingredients, luxury fragrance, and powerful results for skin & hair.
+      </p>
+      <a class="btn" href="#products">View Products</a>
+      <a class="btn" href="#contact">Order Now</a>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Aurevia</h2>
+    <p>
+      Aurevia is a luxury herbal brand based in <b>Mansa, Punjab</b>.
+      We focus on natural beauty solutions using traditional ingredients like Reetha, herbs,
+      oils, and premium fragrances. Our goal is to deliver high quality personal care products
+      with premium packaging and trusted results.
+    </p>
+
+    <div class="highlight">
+      <div class="highlight-box">
+        <h3>100% Herbal</h3>
+        <p>Pure herbal ingredients with premium quality standards.</p>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Luxury Packaging</h3>
+        <p>Premium bottle & label designs for a luxury brand feel.</p>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Made in Punjab</h3>
+        <p>Trusted local production with modern branding.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section id="products">
+    <h2>Our Products</h2>
+    <p>
+      Explore our premium product range crafted with herbal power and luxury experience.
+    </p>
+
+    <div class="products">
+
+      <div class="product-card">
+        <h3>Herbal Shampoo</h3>
+        <p>Reetha-based shampoo for smooth hair, shine & scalp cleansing.</p>
+      </div>
+
+      <div class="product-card">
+        <h3>Face Wash</h3>
+        <p>Deep cleansing face wash for glowing skin & oil control.</p>
+      </div>
+
+      <div class="product-card">
+        <h3>Hair Oil</h3>
+        <p>Nourishing hair oil for growth, strength & dandruff control.</p>
+      </div>
+
+      <div class="product-card">
+        <h3>Body Wash</h3>
+        <p>Luxury body wash with fragrance and skin-friendly herbal blend.</p>
+      </div>
+
+      <div class="product-card">
+        <h3>Herbal Powder</h3>
+        <p>Multi-purpose herbal powder for hair mask, skin care & cleansing.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact & Order</h2>
+    <p>
+      For wholesale orders, dealership or personal orders, contact us directly.
+    </p>
+
+    <div class="contact-box">
+      <h3>AUREVIA Official Contact</h3>
+      <p><b>📍 Location:</b> Mansa, Punjab</p>
+      <p><b>📞 Call:</b> <a style="color:#d4af37;text-decoration:none;" href="tel:8437289353">8437289353</a></p>
+      <p><b>💬 WhatsApp:</b> <a style="color:#25D366;text-decoration:none;" href="https://wa.me/918437289353">Chat Now</a></p>
+      <p><b>🕒 Working Hours:</b> 9:00 AM - 9:00 PM</p>
+      <p><b>🚚 Delivery:</b> Punjab & All India Available</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 AUREVIA | Luxury Herbal Care | Mansa Punjab</p>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <a class="whatsapp" href="https://wa.me/918437289353" target="_blank">WhatsApp</a>
+  <a class="callbtn" href="tel:8437289353">Call</a>
+
+</body>
+</html>
